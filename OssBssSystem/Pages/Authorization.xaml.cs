@@ -22,6 +22,7 @@ namespace OssBssSystem.Pages
     public partial class Authorization : Page
     {
         DataManager context = new DataManager();
+        string randomString;
         public Authorization()
         {
             InitializeComponent();
@@ -33,11 +34,18 @@ namespace OssBssSystem.Pages
             {
                 if( !(String.IsNullOrEmpty(login.Text)) && !(String.IsNullOrEmpty(password.Text)) )
                 {
-                    string loginUser = login.Text;
-                    string passwordUser = login.Text;
-                    if(context.Staffs.Any(x=> x.Number == Convert.ToInt32(loginUser) && x.Password == passwordUser))
+                    int loginUser = Convert.ToInt32(login.Text);
+                    string passwordUser = password.Text;
+                    if(context.Staffs.Any(x=> x.Number == loginUser && x.Password == passwordUser))
                     {
-                        MessageBox.Show("!!!!");
+                        var rand = new Random();
+                        var s = new StringBuilder();
+                        for(int i= 1 ; i< 8; i++)
+                        {
+                            s.Append((char)rand.Next('A', 'Z'));
+                        }
+                        randomString = s.ToString();
+                        MessageBox.Show(randomString);
                     }
                 }
                 else
