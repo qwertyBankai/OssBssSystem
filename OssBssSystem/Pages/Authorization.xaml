@@ -38,19 +38,19 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Label Content="Номер" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox Name="login" Grid.Column="1" Width="200" Height="16"/>
+            <TextBox KeyDown="LoginInput" Name="login" Grid.Column="1" Width="200" Height="16"/>
             <Label Content="Пароль" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox Name="password" KeyDown="Validation" Grid.Column="1" Width="200" Grid.Row="1" Height="16"/>
+            <TextBox IsEnabled="False" Name="password" KeyDown="Validation" Grid.Column="1" Width="200" Grid.Row="1" Height="16"/>
             <Label Content="Код" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <TextBox Grid.Column="1" Grid.Row="2" Width="200" Height="16"/>
-            <Button Grid.Column="1" Width="30" Height="30" BorderThickness="0" Background="{x:Null}" HorizontalAlignment="Right"  Grid.Row="3">
+            <TextBox IsEnabled="False" Name="textGeneration" Grid.Column="1" Grid.Row="2" Width="200" Height="16"/>
+            <Button IsEnabled="False" Name="RefreshBtn" Click="RefreshGenerationCode" Grid.Column="1" Width="30" Height="30" BorderThickness="0" Background="{x:Null}" HorizontalAlignment="Right"  Grid.Row="3">
                 <Image Source="/Resourse/refresh.jpg" />
             </Button>
 
         </Grid>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1">
             <Button Content="Отмена" Width="150" Height="20" />
-            <Button Content="Вход" Width="150" Height="20" />
+            <Button IsEnabled="False" Name="AutorizationBtn" Click="LogIn" Content="Вход" Width="150" Height="20" />
         </StackPanel>
     </Grid>
 </Page>
