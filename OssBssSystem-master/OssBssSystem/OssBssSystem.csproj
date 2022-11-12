@@ -167,6 +167,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\202211121030560_1.cs" />
+    <Compile Include="Migrations\202211121030560_1.designer.cs">
+      <DependentUpon>202211121030560_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pages\AccountPage.xaml.cs">
       <DependentUpon>AccountPage.xaml</DependentUpon>
     </Compile>
@@ -186,6 +191,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202211121030560_1.resx">
+      <DependentUpon>202211121030560_1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -199,14 +207,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resourse\image.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resourse\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resourse\refresh.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

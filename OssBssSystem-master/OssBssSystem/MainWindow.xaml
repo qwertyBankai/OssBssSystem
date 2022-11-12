@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OssBssSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="C:\Users\c1own\source\repos\OssBssSystem\OssBssSystem\Resourse\image.ico">
+        Title="MainWindow" Height="450" Width="800" Icon="/Resourse/image.ico" >
+
     <Grid>
         <Frame Name="frame" NavigationUIVisibility="Hidden">
             
